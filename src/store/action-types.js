@@ -1,0 +1,7 @@
+export const ADD = 'add'
+export const CLICK = 'click'
+export const REMOVE = 'remove'
+export const EDIT = 'edit'
+export const EMPTY = 'empty'
+export const RESTART = 'restart'
+export const SET = 'set'
