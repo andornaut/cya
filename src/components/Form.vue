@@ -13,7 +13,9 @@
 
     <ul class="form__goal-list">
       <li class="form__goal-item">
-        <label for="noGoalRadio" class="form__goal-label">
+        <label for="noGoalRadio"
+               class="form__goal-label"
+               :class="{ 'form__goal-label--selected': form.goalType === null }">
           <input
             class="form__goal-type"
             type="radio"
@@ -29,7 +31,9 @@
       </li>
 
       <li class="form__goal-item">
-        <label for="numberOfClicksRadio" class="form__goal-label">
+        <label for="numberOfClicksRadio"
+               class="form__goal-label"
+               :class="{ 'form__goal-label--selected': form.goalType === 'NUMBER_OF_CLICKS' }">
           <input
             class="form__goal-type"
             type="radio"
@@ -54,7 +58,9 @@
       </li>
 
       <li class="form__goal-item">
-        <label for="clicksPerDayRadio" class="form__goal-label">
+        <label for="clicksPerDayRadio"
+               class="form__goal-label"
+               :class="{ 'form__goal-label--selected': form.goalType === 'DAYS_IN_A_ROW' }">
           <input
             class="form__goal-type"
             type="radio"
@@ -232,12 +238,18 @@
 
   .form__goal-label {
     background-color: #efdf9a;
+    border: 0.125rem solid transparent;
     border-radius: 0.5rem;
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 1rem 0.5rem;
     text-align: center;
+  }
+
+  .form__goal-label--selected {
+    background-color: #decf91;
+    border-color: #b5ae92;
   }
 
   .form__goal-list {
